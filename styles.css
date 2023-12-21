@@ -37,6 +37,19 @@ iframe {
   font-size: 30px;
   color: orangered;
 }
+/* Add this style for the Slack Help Button */
+.slack-help-button {
+  position: absolute;
+  top: calc(20px + 50px); /* Adjust the top position based on the logo height and timer font size */
+  right: 20px; /* Adjust the right position as needed */
+  padding: 10px;
+  font-size: 30px;
+  background-color: #faf9f6; /* Green color, adjust as needed */
+  color: rgb(250, 153, 8);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
 /* Your existing CSS styles */
 /* CSS for encouraging message animation */
 @keyframes drop {
