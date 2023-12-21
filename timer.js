@@ -1,24 +1,16 @@
-// Timer function
-function startTimer(duration, display) {
-    let timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+// timer.js
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+// Add your timer functionality here
+// This is a basic example, you might want to enhance it
+let seconds = 0;
 
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration; // Reset the timer or take any action when the timer reaches 0
-        }
-    }, 1000);
+function updateTimer() {
+    const timerElement = document.getElementById('timer');
+    seconds++;
+    const minutes = Math.floor(seconds / 60);
+    const remainderSeconds = seconds % 60;
+    const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
+    timerElement.textContent = display;
 }
 
-// Run the timer when the page loads
-window.onload = function () {
-    const fiveMinutes = 5 * 60; // 5 minutes in seconds
-    const display = document.querySelector('#timer');
-    startTimer(fiveMinutes, display);
-};
+setInterval(updateTimer, 1000); // Update every second

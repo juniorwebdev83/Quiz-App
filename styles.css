@@ -1,29 +1,93 @@
-/* Apply styles to the iframe container */
-.iframe-container {
-  height: 100vh; /* Adjust as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Your existing CSS styles */
+
+body {
+  background-color: rgb(243, 247, 248);
+  margin: 0; /* Reset body margin to 0 */
+  overflow: hidden; /* Prevent scrolling for the whole page */
+}
+
+/* Your existing styles for logo */
+
+/* Additional styles for iframe container */
+#iframe-container {
+  margin-top: 20px; /* Adjust the top margin as needed */
 }
 
 iframe {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 20px); /* Adjust the height to leave space for the top margin */
+  border: 0; /* Remove iframe border */
 }
-
 
 .logo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-  cursor: pointer;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 2; /* Ensure the logo is above the iframe */
 }
-/* Additional style for the timer */
-#timer {
-  font-size: 50px;
-  font-weight: bold;
-  margin-top: 100px;
+
+/* Add this style to your styles.css file or adjust existing styles */
+.timer {
+  position: absolute;
+  margin-right: 20px;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  right: 20px; /* Adjust the distance from the right side of the page */
+  font-size: 30px;
+  color: orangered;
+}
+/* Your existing CSS styles */
+/* CSS for encouraging message animation */
+@keyframes drop {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+/* CSS for encouraging message animation */
+@keyframes drop {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+/* CSS for encouraging message animation */
+@keyframes drop {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* CSS for encouraging message animation */
+@keyframes drop {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* Style for encouraging message */
+.encouraging-message {
+  position: fixed;
+  top: 50%; /* Adjust the top position to be centered vertically */
+  left: 10%; /* Adjust the left position to move messages more to the left */
+  transform: translate(-50%, -50%); /* Center the message horizontally and vertically */
+  padding: 10px;
+  background-color: #fbfdfb;
+  color: rgb(245, 7, 7);
+  font-size: 25px;
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+  animation: drop 3s ease-in-out; /* Adjust the duration property (5s in this example) */
 }
