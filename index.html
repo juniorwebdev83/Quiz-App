@@ -6,8 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
     <title>Your Quiz App</title>
+    <script src="popup.js"></script>
+    <!-- Include the new background-color.js script -->
+    <script src="background-color.js"></script>
 </head>
 <body>
+    <!-- Color picker for background -->
+    <div id="color-picker-container" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+        <label for="backgroundColor">Choose background color:</label>
+        <input type="color" id="backgroundColor" name="backgroundColor">
+        <button onclick="changeBackgroundColor()">Apply</button>
+    </div>
+
     <!-- Container for logo -->
     <div id="logo-container">
         <!-- Your logo -->
@@ -15,7 +25,9 @@
     </div>
 
     <!-- Your iframe -->
-    <iframe title="Quiz Form" src="https://docs.google.com/forms/d/e/1FAIpQLSf5fW73Rx7aUCGvMMA-SLzXPchPyCs-J5PGeHzDM1szg_sRPw/viewform?embedded=true" width="640" height="2962" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="iframe-container">
+        <iframe title="Quiz Form" src="https://docs.google.com/forms/d/e/1FAIpQLSf5fW73Rx7aUCGvMMA-SLzXPchPyCs-J5PGeHzDM1szg_sRPw/viewform?embedded=true" frameborder="0">Loading…</iframe>
+    </div>
 
     <!-- Timer element -->
     <div id="timer" class="timer">00:00</div>
@@ -34,5 +46,10 @@
     <script src="timer.js"></script>
     <script src="logo-drag.js"></script>
     <script src="encouraging-messages.js"></script>
+
+    <!-- Popup message -->
+    <div id="popup-message" class="popup-message">
+        An agent just finished a quiz
+    </div>
 </body>
 </html>
