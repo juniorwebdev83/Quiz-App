@@ -25,6 +25,29 @@ iframe {
   top: 20px; /* Adjust as needed */
   left: 20px; /* Adjust as needed */
   z-index: 2; /* Ensure the logo is above the iframe */
+  cursor: grab; /* Set cursor to grab when not dragging */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.logo:active {
+  cursor: grabbing; /* Set cursor to grabbing when dragging */
+}
+
+/* Add this style to display the tooltip */
+.logo::after {
+  content: 'Move me';
+  position: absolute;
+  top: -20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #f70e0e;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logo:hover::after {
+  opacity: 1;
 }
 
 /* Add this style to your styles.css file or adjust existing styles */
@@ -37,6 +60,7 @@ iframe {
   font-size: 30px;
   color: orangered;
 }
+
 /* Add this style for the Slack Help Button */
 .slack-help-button {
   position: absolute;
@@ -52,42 +76,6 @@ iframe {
 
 /* Your existing CSS styles */
 /* CSS for encouraging message animation */
-@keyframes drop {
-  from {
-    transform: translateY(-100vh);
-  }
-  to {
-    transform: translateY(100vh);
-  }
-}
-/* CSS for encouraging message animation */
-@keyframes drop {
-  from {
-    transform: translateY(-100vh);
-  }
-  to {
-    transform: translateY(100vh);
-  }
-}
-/* CSS for encouraging message animation */
-@keyframes drop {
-  from {
-    transform: translateY(-100vh);
-  }
-  to {
-    transform: translateY(100vh);
-  }
-}
-
-/* CSS for encouraging message animation */
-@keyframes drop {
-  from {
-    transform: translateY(-100vh);
-  }
-  to {
-    transform: translateY(100vh);
-  }
-}
 
 /* Style for encouraging message */
 .encouraging-message {
@@ -96,11 +84,11 @@ iframe {
   left: 10%; /* Adjust the left position to move messages more to the left */
   transform: translate(-50%, -50%); /* Center the message horizontally and vertically */
   padding: 10px;
-  background-color: #fbfdfb;
+  background-color: rgb(243, 247, 248);
   color: rgb(245, 7, 7);
   font-size: 25px;
   text-align: center;
   width: 100%;
   z-index: 999;
-  animation: drop 3s ease-in-out; /* Adjust the duration property (5s in this example) */
+  animation: drop 10s ease-in-out infinite; /* Adjust the duration property (10s in this example) */
 }

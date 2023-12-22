@@ -1,6 +1,6 @@
 // Add this code for logo dragging functionality
 
-let isDragging = false;
+
 let offsetX, offsetY;
 
 const logo = document.getElementById('logo');

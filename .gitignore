@@ -27,3 +27,4 @@ yarn.lock
 # Build files
 build/
 dist/
+.vercel
