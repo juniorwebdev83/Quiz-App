@@ -2,10 +2,12 @@
 // Encouraging messages array
 const encouragingMessages = [
     "If you don't know, you can see the training Material",
+    "Dont Worry About the time",
     "Believe in Yourself!",
     "Stay Positive!",
     "Keep Going!",
     "Don't Give Up!",
+    "you can see the training Material",
     "You're Stronger Than You Think!",
     "Every Step Counts!",
     "Success is a Journey, Not a Destination!",

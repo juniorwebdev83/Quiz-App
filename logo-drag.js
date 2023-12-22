@@ -1,14 +1,20 @@
-// Add this code for logo dragging functionality
-
-
+let isDragging = false;
 let offsetX, offsetY;
 
+const logoContainer = document.getElementById('logo-container'); // Added logo container
 const logo = document.getElementById('logo');
+const goBackElement = document.getElementById('goBack');
 
 logo.addEventListener('mousedown', (e) => {
   isDragging = true;
   offsetX = e.clientX - logo.getBoundingClientRect().left;
   offsetY = e.clientY - logo.getBoundingClientRect().top;
+
+  // Show the "GO BACK" word when dragging starts
+  goBackElement.style.opacity = 1;
+
+  // Add 'dragging' class to logo container when dragging starts
+  logoContainer.classList.add('dragging');
 });
 
 document.addEventListener('mousemove', (e) => {
@@ -23,4 +29,10 @@ document.addEventListener('mousemove', (e) => {
 
 document.addEventListener('mouseup', () => {
   isDragging = false;
+
+  // Hide the "GO BACK" word when dragging ends
+  goBackElement.style.opacity = 0;
+
+  // Remove 'dragging' class from logo container when dragging ends
+  logoContainer.classList.remove('dragging');
 });
