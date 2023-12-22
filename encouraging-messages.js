@@ -1,7 +1,7 @@
 // Encouraging messages array
 // Encouraging messages array
 const encouragingMessages = [
-    "You Can Do It!",
+    "If you don't know, you can see the training Material",
     "Believe in Yourself!",
     "Stay Positive!",
     "Keep Going!",
