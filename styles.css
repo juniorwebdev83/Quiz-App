@@ -1,6 +1,6 @@
 /* Reset body margin to 0 and prevent scrolling for the whole page */
 body {
-  background-color: rgb(249, 160, 77);
+  background-color: rgb(247, 226, 207);
   margin: 0;
   overflow: hidden;
 }
