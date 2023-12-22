@@ -1,6 +1,6 @@
 /* Reset body margin to 0 and prevent scrolling for the whole page */
 body {
-  background-color: rgb(247, 226, 207);
+  background-color: rgb(245, 223, 201);
   margin: 0;
   overflow: hidden;
 }
@@ -25,13 +25,14 @@ iframe {
   left: 20px; /* Adjust as needed */
   z-index: 2; /* Ensure the logo is above the iframe */
   cursor: grab; /* Set cursor to grab when not dragging */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+  box-shadow: 5px 5px 5px rgb(21, 20, 20); /* Add shadow */
 }
 
 /* Your existing styles for the timer */
 .timer {
   position: fixed; /* Use fixed positioning */
   margin-right: 20px;
+ 
   top: 20px;
   right: 20px;
   font-size: 30px;
