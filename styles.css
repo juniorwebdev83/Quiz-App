@@ -80,15 +80,14 @@ iframe {
 /* Style for encouraging message */
 .encouraging-message {
   position: fixed;
-  top: 50%; /* Adjust the top position to be centered vertically */
-  left: 10%; /* Adjust the left position to move messages more to the left */
-  transform: translate(-50%, -50%); /* Center the message horizontally and vertically */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 10px;
-  background-color: rgb(243, 247, 248);
   color: rgb(245, 7, 7);
   font-size: 25px;
   text-align: center;
   width: 100%;
   z-index: 999;
-  animation: drop 10s ease-in-out infinite; /* Adjust the duration property (10s in this example) */
+  animation: drop 10s ease-in-out infinite;/* Adjust the duration property (10s in this example) */
 }
