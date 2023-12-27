@@ -23,17 +23,27 @@ iframe {
   position: relative; /* Make sure the container is positioned */
 }
 
-/* Your existing styles for the hotel logo */
 .logo {
   position: fixed;
-  top: 20px; /* Adjust as needed for top positioning */
-  left: 78%; /* Move the logo to the right side of the page */
-  transform: translate(-100%, 0);
-  z-index: 1; /* Ensure the logo is above the iframe */
-  cursor: grab; /* Set cursor to grab when not dragging */
-  box-shadow: 5px 5px 5px rgb(21, 20, 20); /* Add shadow */
-  width: 200px; /* Adjust the width as needed */
+  top: 40px;
+  left: 58%;
+  transform: translateX(-100%);
+  z-index: 1000; /* Use a higher z-index to ensure it's on top */
+  
+  box-shadow: 5px 5px 5px rgba(250, 148, 6, 0.8);
+  width: 300px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
+}
+/* Styles for the new image */
+#newImage {
+  position: fixed;
+  top: 130px; /* Adjust the top position as needed */
+  left: 66.2%; /* Adjust the left position as needed */
+  transform: translateX(-100%);
+  z-index: 999; /* Use a slightly lower z-index to appear below the logo */
+  width: 640px; /* Set the width to match the image's original size */
+  height: 140px; /* Maintain aspect ratio */
+  border-radius: 15px;
 }
 
 
