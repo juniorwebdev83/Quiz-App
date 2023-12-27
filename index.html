@@ -7,22 +7,11 @@
     <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
     <title>Your Quiz App</title>
     <script src="popup.js"></script>
-    <!-- Include the new background-color.js script -->
-    <script src="background-color.js"></script>
 </head>
 <body>
-    <!-- Color picker for background -->
-    <div id="color-picker-container" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
-        <label for="backgroundColor">Choose background color:</label>
-        <input type="color" id="backgroundColor" name="backgroundColor">
-        <button onclick="changeBackgroundColor()">Apply</button>
-    </div>
 
-    <!-- Container for logo -->
-    <div id="logo-container">
-        <!-- Your logo -->
-        <img id="logo" src="hotel.jpeg" alt="Logo" class="logo">
-    </div>
+    <!-- Your hotel logo -->
+    <img id="logo" src="hotel.jpeg" alt="Hotel Logo" class="logo">
 
     <!-- Your iframe -->
     <div class="iframe-container">
@@ -35,21 +24,16 @@
     <!-- Footer -->
     <footer>
         <!-- Overlay footer -->
-        <div class="overlay-footer">
-            <p>A quiz is a brief assessment or examination designed to test knowledge, skills, or abilities on a particular subject. </p>
-            <img src="hotel-footer.jpeg" alt="Hotel Footer Logo" class="footer-logo">
-        </div>
+        <div class="overlay-footer"></div>
     </footer>
 
-    <!-- Include your existing scripts -->
-    <script src="script.js"></script>
-    <script src="timer.js"></script>
-    <script src="logo-drag.js"></script>
-    <script src="encouraging-messages.js"></script>
+   <!-- Scripts at the end of the body -->
+   <script src="popup.js"></script>
+   <script src="background-color.js"></script>
+   <script src="scrollVisibility.js"></script> <!-- Include your JavaScript file here -->
+   <script src="script.js"></script>
+   <script src="timer.js"></script>
+   <script src="encouraging-messages.js"></script>
 
-    <!-- Popup message -->
-    <div id="popup-message" class="popup-message">
-        An agent just finished a quiz
-    </div>
 </body>
 </html>
