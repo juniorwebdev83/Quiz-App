@@ -28,8 +28,7 @@ iframe {
   top: 40px;
   left: 58%;
   transform: translateX(-100%);
-  z-index: 1000; /* Use a higher z-index to ensure it's on top */
-  
+  z-index: 1000; /* Use a higher z-index to ensure it's on top */  
   box-shadow: 5px 5px 5px rgba(250, 148, 6, 0.8);
   width: 300px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
@@ -37,13 +36,21 @@ iframe {
 /* Styles for the new image */
 #newImage {
   position: fixed;
-  top: 130px; /* Adjust the top position as needed */
-  left: 66.2%; /* Adjust the left position as needed */
-  transform: translateX(-100%);
-  z-index: 999; /* Use a slightly lower z-index to appear below the logo */
-  width: 640px; /* Set the width to match the image's original size */
-  height: 140px; /* Maintain aspect ratio */
+  top: 130px;
+  max-width: 100%; /* Make the image responsive */
+  z-index: 999;
+  width: 80%; /* Adjust the width as needed */
+  height: auto;
   border-radius: 15px;
+  left: 50%; /* Center the image horizontally */
+  transform: translateX(-50%);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  #newImage {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
 }
 
 
@@ -75,17 +82,7 @@ iframe {
 }
 
 /* Keyframes for encouraging message animation */
-@keyframes drop {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 
 /* Add this style to create an overlay footer */
 .overlay-footer {
