@@ -33,25 +33,20 @@ iframe {
   width: 300px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
 }
+
 /* Styles for the new image */
 #newImage {
   position: fixed;
   top: 130px;
-  max-width: 100%; /* Make the image responsive */
+  left: 66.2%;
+  transform: translateX(-100%);
   z-index: 999;
-  width: 80%; /* Adjust the width as needed */
-  height: auto;
+  width: 640px;
+  height: 140px;
   border-radius: 15px;
-  left: 50%; /* Center the image horizontally */
-  transform: translateX(-50%);
 }
 
 /* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
-  #newImage {
-    width: 90%; /* Adjust the width for smaller screens */
-  }
-}
 
 
 
