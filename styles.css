@@ -4,12 +4,11 @@ body {
   margin: 0;
 }
 
-/* Popup message */
-
 /* Styles for the Google Form iframe */
 iframe {
   display: block;
   width: 100%;
+  z-index: 995;
   height: calc(100vh - 20px); /* Adjust the height to leave space for the top margin */
   border: 0; /* Remove iframe border */
   position: fixed;
@@ -18,95 +17,78 @@ iframe {
   z-index: 1; /* Higher z-index to appear above the beach image */
 }
 
-/* Your existing styles for the logo container */
+/* Timer styles */
+.timer {
+  position: fixed; /* Use fixed positioning */
+  margin-right: 20px;
+  z-index: 1000;
+  top: 5px;
+  left: 67%;
+  right: 5px;
+  font-weight: bolder;
+  font-size: 30px;
+  color: rgb(13, 12, 11);
+}
+
+/* Logo container styles */
 #logo-container {
   position: relative; /* Make sure the container is positioned */
 }
 
+/* Logo styles */
 .logo {
   position: fixed;
-  top: 2%;
-  left: 57%;
+  top: 1.5%;
+  left: 59%;
   transform: translateX(-100%);
-  z-index: 999; /* Use a higher z-index to ensure it's on top */  
-  
+  z-index: 990; /* Use a higher z-index to ensure it's on top */
   width: 350px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Styles for the new image */
-
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 844px) {
-  .logo {
-    top: 25px; /* Adjust top position for smaller screens */
-    z-index: 999;
-    left: 54%; /* Center the logo horizontally on smaller screens */
-    transform: translateX(-50%);
-    width: 60%; /* Adjust the width for smaller screens */
-    max-width: 300px; /* Set a maximum width if needed */
-  }
-
-.timer {
-  position: fixed; /* Use fixed positioning */
-  
-  margin-right: 680px;
-  z-index: 1000;
-  top: 33px;
-  left: 150;
-  right: 20px;
-  font-weight: bolder;
-  font-size: 25px;
-  color: rgb(13, 13, 12);
-  transition: top 0.3s; /* Add a smooth transition effect */
-}
-/* Media query for timer smaller screens */
+/* Media query for timer on smaller screens */
 @media only screen and (max-width: 600px) {
   .timer {
-    top: 10px; /* Adjust top position for smaller screens */
-    margin-right: 20px ;
-    left: 78%; /* Center the logo horizontally on smaller screens */
-    z-index: 1000; /* Use a higher z-index to ensure it's on top */  
+    top: 5px;
+    margin-right: 20px;
+    left: 100%;
+    z-index: 1000;
     transform: translateX(-50%);
-    width: 80%; /* Adjust the width for smaller screens */
-    max-width: 300px; /* Set a maximum width if needed */
-  }}
-
-/* Your existing styles for the encouraging message animation */
-.encouraging-message {
-  position: fixed;
-  bottom: 20px; /* Adjust the bottom distance as needed */
-  right: 20px; /* Adjust the right distance as needed */
-  padding: 10px;
-  color: rgb(245, 7, 7);
-  font-size: 25px;
-  text-align: center;
-  width: auto; /* Adjust width as needed */
-  z-index: 999;
-  animation: drop 5s ease-in-out infinite;
-}}
+    width: 80%;
+    max-width: 300px;
+  }
+  .logo {
+    position: fixed;
+    top: 1%;
+    left: 59%;
+    transform: translateX(-100%);
+    z-index: 999; /* Use a higher z-index to ensure it's on top */
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
 
 
-/* Add this style to create an overlay footer */
+
+/* Overlay footer styles */
 .overlay-footer {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100px; /* Adjust the height as needed */
-  background-color: rgb(255,255,255,255);
+  background-color: rgb(255, 255, 255, 255);
   z-index: 3; /* Ensure the overlay is above the iframe and logo */
 }
 
-/* Add this style to center text in the overlay footer */
+/* Center text in the overlay footer */
 .overlay-footer p {
   text-align: center;
   line-height: 100px; /* Match the height of the overlay */
   margin: 0;
 }
 
-/* Your existing styles for the footer logo */
+/* Footer logo styles */
 .footer-logo {
   position: absolute;
   box-shadow: 5px 5px 5px rgb(21, 20, 20); /* Add shadow */
