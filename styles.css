@@ -57,10 +57,11 @@ iframe {
   }
 
   #newImage {
-    top: 168px; /* Adjust top position for smaller screens */
+    top: 170px; /* Adjust top position for smaller screens */
     left: 48%; /* Center the new image horizontally on smaller screens */
     transform: translateX(-50%);
-    width: 85%; /* Adjust the width for smaller screens */
+    height: 300px;
+    width: 83%; /* Adjust the width for smaller screens */
     max-width: 640px; /* Set a maximum width if needed */
   }
 }
@@ -91,11 +92,15 @@ iframe {
 /* Your existing styles for the timer */
 .timer {
   position: fixed; /* Use fixed positioning */
-  margin-right: 20px;
-  top: 20px;
+  
+  margin-right: 680px;
+  z-index: 1000;
+  top: 33px;
+  left: 150;
   right: 20px;
-  font-size: 30px;
-  color: rgb(24, 11, 1);
+  font-weight: bolder;
+  font-size: 25px;
+  color: rgb(13, 13, 12);
   transition: top 0.3s; /* Add a smooth transition effect */
 }
 /* Media query for timer smaller screens */
