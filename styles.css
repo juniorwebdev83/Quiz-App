@@ -12,8 +12,8 @@ iframe {
   width: 100%;
   height: calc(100vh - 20px); /* Adjust the height to leave space for the top margin */
   border: 0; /* Remove iframe border */
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: -1%;
   left: 0;
   z-index: 1; /* Higher z-index to appear above the beach image */
 }
@@ -25,11 +25,11 @@ iframe {
 
 .logo {
   position: fixed;
-  top: 25px;
+  top: 2%;
   left: 57%;
   transform: translateX(-100%);
   z-index: 999; /* Use a higher z-index to ensure it's on top */  
-  box-shadow: 5px 5px 5px #003388;
+  
   width: 350px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
 }
@@ -37,6 +37,8 @@ iframe {
 /* Styles for the new image */
 #newImage {
   position: fixed;
+  box-shadow: 4px 4px 4px #f98f04, -4px -4px 4px #f4a006;
+  animation: pulsate 3s infinite; 
   top: 140px;
   left: 66.2%;
   transform: translateX(-100%);
@@ -47,48 +49,43 @@ iframe {
 }
 
 /* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 844px) {
   .logo {
-    top: 37px; /* Adjust top position for smaller screens */
+    top: 25px; /* Adjust top position for smaller screens */
     z-index: 999;
-    left: 48%; /* Center the logo horizontally on smaller screens */
+    left: 54%; /* Center the logo horizontally on smaller screens */
     transform: translateX(-50%);
-    width: 80%; /* Adjust the width for smaller screens */
+    width: 60%; /* Adjust the width for smaller screens */
     max-width: 300px; /* Set a maximum width if needed */
   }
 
   #newImage {
-    top: 170px; /* Adjust top position for smaller screens */
+    top: 158px; /* Adjust top position for smaller screens */
     left: 48%; /* Center the new image horizontally on smaller screens */
     transform: translateX(-50%);
-    height: 300px;
-    width: 83%; /* Adjust the width for smaller screens */
-    max-width: 640px; /* Set a maximum width if needed */
+    box-shadow: 4px 4px 4px #f98f04, -4px -4px 4px #f4a006;
+
+
+
+    height: 270px;
+    width: 85%; /* Adjust the width for smaller screens */
+    max-width: 844px; /* Set a maximum width if needed */
   }
 }
-/* 
-  Media query for landscape orientation - Commented out
-  @media only screen and (max-device-width: 600px) and (orientation: landscape) {
-    .logo {
-      top: 40px; 
-      left: 50%; 
-      transform: translateX(-50%);
-      width: 300px; 
-      max-width: none; 
-    }
-
-    #newImage {
-      top: 130px; 
-      left: 70%; 
-      transform: translateX(-100%);
-      width: 640px; 
-      max-width: none; 
-    }
+@keyframes pulsate {
+  0% {
+    box-shadow: 4px 4px 4px #f68d04, -4px -4px 4px #f68d04, 0 0 8px rgba(255, 255, 255, 0.5);
   }
-*/
-
-
-
+  50% {
+    box-shadow: 6px 6px 6px #003388, -6px -6px 6px #003388, 0 0 12px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 4px 4px 4px #003388, -4px -4px 4px #003388, 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+}
+#newImage {
+  animation: pulsate 3s infinite; /* Adjust the duration as needed */
+}
 
 /* Your existing styles for the timer */
 .timer {
