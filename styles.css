@@ -47,6 +47,43 @@ iframe {
 }
 
 /* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .logo {
+    top: 42px; /* Adjust top position for smaller screens */
+    left: 48%; /* Center the logo horizontally on smaller screens */
+    transform: translateX(-50%);
+    width: 80%; /* Adjust the width for smaller screens */
+    max-width: 300px; /* Set a maximum width if needed */
+  }
+
+  #newImage {
+    top: 168px; /* Adjust top position for smaller screens */
+    left: 48%; /* Center the new image horizontally on smaller screens */
+    transform: translateX(-50%);
+    width: 85%; /* Adjust the width for smaller screens */
+    max-width: 640px; /* Set a maximum width if needed */
+  }
+}
+/* 
+  Media query for landscape orientation - Commented out
+  @media only screen and (max-device-width: 600px) and (orientation: landscape) {
+    .logo {
+      top: 40px; 
+      left: 50%; 
+      transform: translateX(-50%);
+      width: 300px; 
+      max-width: none; 
+    }
+
+    #newImage {
+      top: 130px; 
+      left: 70%; 
+      transform: translateX(-100%);
+      width: 640px; 
+      max-width: none; 
+    }
+  }
+*/
 
 
 
