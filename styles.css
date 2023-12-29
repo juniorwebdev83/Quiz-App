@@ -85,9 +85,7 @@ iframe {
   width: auto; /* Adjust width as needed */
   z-index: 999;
   animation: drop 5s ease-in-out infinite;
-}
-
-/* Keyframes for encouraging message animation */
+}}
 
 
 /* Add this style to create an overlay footer */
