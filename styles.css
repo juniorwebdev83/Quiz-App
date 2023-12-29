@@ -28,7 +28,7 @@ iframe {
   top: 40px;
   left: 58%;
   transform: translateX(-100%);
-  z-index: 1000; /* Use a higher z-index to ensure it's on top */  
+  z-index: 999; /* Use a higher z-index to ensure it's on top */  
   box-shadow: 5px 5px 5px rgba(250, 148, 6, 0.8);
   width: 300px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
@@ -95,9 +95,20 @@ iframe {
   top: 20px;
   right: 20px;
   font-size: 30px;
-  color: rgb(16, 16, 16);
+  color: rgb(24, 11, 1);
   transition: top 0.3s; /* Add a smooth transition effect */
 }
+/* Media query for timer smaller screens */
+@media only screen and (max-width: 600px) {
+  .timer {
+    top: 10px; /* Adjust top position for smaller screens */
+    margin-right: 20px ;
+    left: 78%; /* Center the logo horizontally on smaller screens */
+    z-index: 1000; /* Use a higher z-index to ensure it's on top */  
+    transform: translateX(-50%);
+    width: 80%; /* Adjust the width for smaller screens */
+    max-width: 300px; /* Set a maximum width if needed */
+  }}
 
 /* Your existing styles for the encouraging message animation */
 .encouraging-message {
