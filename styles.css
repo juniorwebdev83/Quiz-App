@@ -49,7 +49,8 @@ iframe {
 /* Media query for smaller screens */
 @media only screen and (max-width: 600px) {
   .logo {
-    top: 42px; /* Adjust top position for smaller screens */
+    top: 37px; /* Adjust top position for smaller screens */
+    z-index: 999;
     left: 48%; /* Center the logo horizontally on smaller screens */
     transform: translateX(-50%);
     width: 80%; /* Adjust the width for smaller screens */
