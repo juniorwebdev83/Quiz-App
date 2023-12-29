@@ -25,12 +25,12 @@ iframe {
 
 .logo {
   position: fixed;
-  top: 40px;
-  left: 58%;
+  top: 25px;
+  left: 57%;
   transform: translateX(-100%);
   z-index: 999; /* Use a higher z-index to ensure it's on top */  
-  box-shadow: 5px 5px 5px rgba(250, 148, 6, 0.8);
-  width: 300px; /* Adjust the width as needed */
+  box-shadow: 5px 5px 5px #003388;
+  width: 350px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
 }
 
