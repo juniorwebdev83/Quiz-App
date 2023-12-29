@@ -12,7 +12,7 @@ iframe {
   width: 100%;
   height: calc(100vh - 20px); /* Adjust the height to leave space for the top margin */
   border: 0; /* Remove iframe border */
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 1; /* Higher z-index to appear above the beach image */
@@ -37,12 +37,12 @@ iframe {
 /* Styles for the new image */
 #newImage {
   position: fixed;
-  top: 130px;
+  top: 140px;
   left: 66.2%;
   transform: translateX(-100%);
   z-index: 999;
   width: 640px;
-  height: 140px;
+  height: 240px;
   border-radius: 15px;
 }
 
