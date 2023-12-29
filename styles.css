@@ -63,7 +63,14 @@ iframe {
     top: 158px; /* Adjust top position for smaller screens */
     left: 48%; /* Center the new image horizontally on smaller screens */
     transform: translateX(-50%);
-    box-shadow: 4px 4px 4px #f98f04, -4px -4px 4px #f4a006;
+    opacity: 0; /* Fully transparent */
+    pointer-events: none; /* Allows clicks to pass through */
+    animation: pulsate 3s infinite; /* Adjust the duration as needed */
+  }
+  
+  }
+  
+    
 
 
 
