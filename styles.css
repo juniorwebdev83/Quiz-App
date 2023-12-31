@@ -22,7 +22,7 @@ iframe {
   position: fixed; /* Use fixed positioning */
   margin-right: 20px;
   z-index: 1000;
-  top: 6%;
+  top: 5%;
   left: 60%;
   right: 5px;
   font-weight: bolder;
@@ -38,8 +38,8 @@ iframe {
 /* Logo styles */
 .logo {
   position: fixed;
-  top: 5%;
-  left: 59%;
+  top: 4%;
+  left: 58%;
   transform: translateX(-100%);
   z-index: 990; /* Use a higher z-index to ensure it's on top */
   width: 250px; /* Adjust the width as needed */
@@ -47,11 +47,11 @@ iframe {
 }
 
 /* Media query for timer on smaller screens */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .timer {
-    top: 5px;
+    top: 2%;
     margin-right: 20px;
-    left: 100%;
+    left: 90%;
     z-index: 1000;
     transform: translateX(-50%);
     width: 80%;
@@ -59,7 +59,7 @@ iframe {
   }
   .logo {
     position: fixed;
-    top: 1%;
+    top: 2%;
     left: 59%;
     transform: translateX(-100%);
     z-index: 999; /* Use a higher z-index to ensure it's on top */
