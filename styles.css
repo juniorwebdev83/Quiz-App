@@ -2,6 +2,12 @@
 body {
   background-color: rgba(255, 255, 255, 1);
   margin: 0;
+  font-family: Arial, sans-serif; /* Specify a default font family */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 /* Styles for the Google Form iframe */
@@ -17,7 +23,6 @@ iframe {
   z-index: 1; /* Higher z-index to appear above the beach image */
 }
 
-/* Timer styles */
 .timer {
   position: fixed; /* Use fixed positioning */
   margin-right: 20px;
@@ -25,50 +30,36 @@ iframe {
   top: 5%;
   left: 60%;
   right: 5px;
-  font-weight: bolder;
-  font-size: 30px;
-  color: rgb(13, 12, 11);
+  font-weight: lighter;
+  font-size: 12px; /* Set the font size to 12px */
+  color: rgb(20, 17, 15);
+  
 }
 
-/* Logo container styles */
-#logo-container {
-  position: relative; /* Make sure the container is positioned */
-}
 
-/* Logo styles */
-.logo {
-  position: fixed;
-  top: 4%;
-  left: 58%;
-  transform: translateX(-100%);
-  z-index: 990; /* Use a higher z-index to ensure it's on top */
-  width: 250px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-}
 
-/* Media query for timer on smaller screens */
+
+/* Media query for timer and logo on smaller screens */
 @media only screen and (max-width: 600px) {
   .timer {
-    top: 2%;
+    top: 5%; /* Adjust the top position */
+    left: 60%; /* Adjust the left position */
     margin-right: 20px;
-    left: 90%;
     z-index: 1000;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 300px;
-  }
-  .logo {
-    position: fixed;
-    top: 2%;
-    left: 59%;
-    transform: translateX(-100%);
-    z-index: 999; /* Use a higher z-index to ensure it's on top */
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-  }
-}
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }}
 
+ 
+/* Media query for larger screens */
+@media screen and (min-width: 1025px) {
+  .timer {
+    top: 5%;
+    left: 60%;
+    margin-right: 20px;
+    font-size: 30px; /* Adjust font size for larger screens */
+  }}
 
+ 
 
 /* Overlay footer styles */
 .overlay-footer {
@@ -97,22 +88,6 @@ iframe {
   transform: translateY(-50%);
   max-width: 15%; /* Adjust as needed */
   z-index: 1000; /* Higher z-index to be above overlay footer */
-}
-
-/* Responsive styles for larger screens */
-@media screen and (min-width: 1025px) {
-  body {
-    font-size: 16px;
-  }
-
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .footer-logo {
-    max-width: 15%; /* Adjust as needed */
-  }
 }
 
 /* Responsive styles for smaller screens */

@@ -1,14 +1,28 @@
-// timer.js
-
 let seconds = 0;
 
 function updateTimer() {
   const timerElement = document.getElementById('timer');
+  
+  // Update the timer
   seconds++;
   const minutes = Math.floor(seconds / 60);
   const remainderSeconds = seconds % 60;
-  const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
+  
+  // Update display to show only numeric values
+  const display = `${minutes}m ${remainderSeconds}s`;
+  
   timerElement.textContent = display;
+}
+
+// Function to format the date as 'Day, Year'
+function formatDayAndYear(date) {
+  const dayOptions = { weekday: 'long' };
+  const yearOptions = { year: 'numeric' };
+
+  const day = new Intl.DateTimeFormat('en-US', dayOptions).format(date);
+  const year = new Intl.DateTimeFormat('en-US', yearOptions).format(date);
+  
+  return `${day}, ${year}`;
 }
 
 setInterval(updateTimer, 1000); // Update every second
