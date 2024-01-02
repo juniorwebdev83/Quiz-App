@@ -1,4 +1,9 @@
 let seconds = 0;
+let timerInterval; // Store the interval ID to manage it later
+
+function startTimer() {
+  timerInterval = setInterval(updateTimer, 1000);
+}
 
 function updateTimer() {
   const timerElement = document.getElementById('timer');
@@ -8,33 +13,17 @@ function updateTimer() {
   const minutes = Math.floor(seconds / 60);
   const remainderSeconds = seconds % 60;
   
-  // Update display to show only numeric values
-  const display = `${minutes}m ${remainderSeconds}s`;
+  // Format minutes and seconds as two digits
+  const formattedMinutes = String(minutes).padStart(2, '0');
+  const formattedSeconds = String(remainderSeconds).padStart(2, '0');
+  
+  // Update display to show minutes and seconds in HH:MM format
+  const display = `${formattedMinutes}:${formattedSeconds}`;
   
   timerElement.textContent = display;
 }
 
-// Function to format the date as 'Day, Year'
-function formatDayAndYear(date) {
-  const dayOptions = { weekday: 'long' };
-  const yearOptions = { year: 'numeric' };
+// Call startTimer to begin the countdown
+startTimer();
 
-  const day = new Intl.DateTimeFormat('en-US', dayOptions).format(date);
-  const year = new Intl.DateTimeFormat('en-US', yearOptions).format(date);
-  
-  return `${day}, ${year}`;
-}
-
-setInterval(updateTimer, 1000); // Update every second
-
-// Add scrolling behavior
-const timer = document.getElementById('timer');
-
-// Add a scroll event listener
-window.addEventListener('scroll', function() {
-  // Calculate the new top position based on the scroll distance
-  const newTop = Math.max(20, 20 - window.scrollY) + 'px';
-  
-  // Update the top property of the timer
-  timer.style.top = newTop;
-});
+// Rest of your code...
