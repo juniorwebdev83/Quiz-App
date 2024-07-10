@@ -17,7 +17,7 @@ function updateTimer() {
   const formattedMinutes = String(minutes).padStart(2, '0');
   const formattedSeconds = String(remainderSeconds).padStart(2, '0');
   
-  // Update display to show minutes and seconds in HH:MM format
+  // Update display to show minutes and seconds in MM:SS format
   const display = `${formattedMinutes}:${formattedSeconds}`;
   
   timerElement.textContent = display;
@@ -26,4 +26,11 @@ function updateTimer() {
 // Call startTimer to begin the countdown
 startTimer();
 
-// Rest of your code...
+// Function to get the current timer value in MM:SS format
+function getTimerValue() {
+  const minutes = Math.floor(seconds / 60);
+  const remainderSeconds = seconds % 60;
+  const formattedMinutes = String(minutes).padStart(2, '0');
+  const formattedSeconds = String(remainderSeconds).padStart(2, '0');
+  return `${formattedMinutes}:${formattedSeconds}`;
+}
