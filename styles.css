@@ -1,28 +1,3 @@
-/* Reset body margin to 0 and prevent scrolling for the whole page */
-body {
-  background-color: rgba(255, 255, 255, 1);
-  margin: 0;
-  font-family: Arial, sans-serif; /* Specify a default font family */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
-}
-
-/* Styles for the Google Form iframe */
-iframe {
-  display: block;
-  width: 100%;
-  z-index: 995;
-  height: calc(100vh - 20px); /* Adjust the height to leave space for the top margin */
-  border: 0; /* Remove iframe border */
-  position: fixed;
-  top: -1%;
-  left: 0;
-  z-index: 1; /* Higher z-index to appear above the beach image */
-}
-
 .timer {
   position: fixed; /* Use fixed positioning */
   margin-right: 20px;
@@ -32,12 +7,8 @@ iframe {
   right: 5px;
   font-weight: lighter;
   font-size: 12px; /* Set the font size to 12px */
-  color: rgb(20, 17, 15);
-  
+  color: red; /* Change the color to red */
 }
-
-
-
 
 /* Media query for timer and logo on smaller screens */
 @media only screen and (max-width: 600px) {
@@ -47,9 +18,10 @@ iframe {
     margin-right: 20px;
     z-index: 1000;
     font-size: 18px; /* Adjust font size for smaller screens */
-  }}
+    color: red; /* Change the color to red */
+  }
+}
 
- 
 /* Media query for larger screens */
 @media screen and (min-width: 1025px) {
   .timer {
@@ -57,47 +29,6 @@ iframe {
     left: 60%;
     margin-right: 20px;
     font-size: 30px; /* Adjust font size for larger screens */
-  }}
-
- 
-
-/* Overlay footer styles */
-.overlay-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px; /* Adjust the height as needed */
-  background-color: rgb(255, 255, 255, 255);
-  z-index: 3; /* Ensure the overlay is above the iframe and logo */
-}
-
-/* Center text in the overlay footer */
-.overlay-footer p {
-  text-align: center;
-  line-height: 100px; /* Match the height of the overlay */
-  margin: 0;
-}
-
-/* Footer logo styles */
-.footer-logo {
-  position: absolute;
-  box-shadow: 5px 5px 5px rgb(21, 20, 20); /* Add shadow */
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  max-width: 15%; /* Adjust as needed */
-  z-index: 1000; /* Higher z-index to be above overlay footer */
-}
-
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-
-  .container {
-    width: 100%;
-    padding: 10px;
+    color: red; /* Change the color to red */
   }
 }
