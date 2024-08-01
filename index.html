@@ -4,47 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <title>Your Quiz App</title>
 </head>
 <body>
+    <div class="content-wrapper">
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfPPH0BFTuJtbfHwqUn0D0bcQvhr1Po17sy_b-utJglrh-qvA/viewform?embedded=true" width="640" height="5178" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
 
-    <!-- Your hotel logo -->
-
-    <!-- New image under the logo -->
-
-    <!-- Your iframe -->
-    <div class="iframe-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfPPH0BFTuJtbfHwqUn0D0bcQvhr1Po17sy_b-utJglrh-qvA/viewform?embedded=true" width="640" height="5178" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div id="timer" class="timer">00:00</div>
     </div>
 
-    <!-- Timer element -->
-    <div id="timer" class="timer">00:00</div>
-
-    <!-- Footer -->
     <footer>
-        <!-- Overlay footer -->
         <div class="overlay-footer"></div>
     </footer>
 
-    <!-- Scripts at the end of the body -->
     <script src="popup.js"></script>
-    <script src="scrollVisibility.js"></script> <!-- Include your JavaScript file here -->
+    <script src="scrollVisibility.js"></script>
     <script src="timer.js"></script>
     <script>
-      // Listen for the form submission
-      const iframe = document.getElementById('quizForm');
-      iframe.addEventListener('load', () => {
-        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        const form = iframeDocument.querySelector('form');
-        if (form) {
-          form.addEventListener('submit', () => {
-            const timerValue = getTimerValue();
-            // You can send the timer value to your server here
-            console.log('Timer Value:', timerValue);
-          });
-        }
-      });
+      // Your existing script
     </script>
 </body>
 </html>
